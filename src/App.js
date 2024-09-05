@@ -1,23 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import LeftWidgets from "./components/LeftWidgets.jsx";
+import RightTopWidgets from "./components/RightTopWidgets.jsx";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="bg-[#373E44] w-[1728px] h-[895px] rounded-[27px] flex overflow-hidden">
+      <div className="flex-shrink-0 w-[836px]">
+        <LeftWidgets />
+      </div>
+      <div className="flex-shrink-0 w-[720px]">
+        <RightTopWidgets />
+        <RightTopWidgets />
+      </div>
     </div>
   );
 }
