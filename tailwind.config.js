@@ -11,8 +11,29 @@ module.exports = {
       fontSize: {
         'custom-large': '59.52px',
       },
+      fontFamily: {
+        sans: ['Poppins', 'sans-serif'], // Use Poppins as the primary sans-serif font
+      },
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addComponents }) {
+      addComponents({
+        '.custom-scrollbar': {
+          '&::-webkit-scrollbar': {
+          width: '8px',
+          height: '64px',
+          top: '207px',
+          left: '1621px',
+          gap: '0px',
+          borderRadius: '8px 0px 0px 0px',
+          opacity: '0px',
+          backgroundImage: 'linear-gradient(177.32deg, #888989 5.6%, #4A4E54 93.28%)',
+        },
+         
+        },
+      });
+    },
+  ],
 }
 
